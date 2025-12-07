@@ -1,0 +1,160 @@
+/* 🌸 Global Style */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fde2f3, #f9d5e5, #fff1f7);
+  background-size: 300% 300%;
+  animation: bgShift 15s infinite alternate;
+  text-align: center;
+  color: #663366;
+}
+
+@keyframes bgShift {
+  0% { background-position: left top; }
+  100% { background-position: right bottom; }
+}
+
+/* 🌷 Page 1 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #b14d8e;
+}
+
+.countdown h2, #countdown {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.glow-button {
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.glow-button.locked {
+  background-color: #f3c4d3;
+  color: #7a5a70;
+  cursor: not-allowed;
+}
+
+.glow-button.unlocked {
+  background: linear-gradient(45deg, #ff7ee5, #ffb3ff, #ff7ee5);
+  background-size: 400%;
+  color: white;
+  animation: glow 3s linear infinite;
+  box-shadow: 0 0 20px rgba(255, 100, 200, 0.7);
+}
+
+@keyframes glow {
+  0% { background-position: 0%; }
+  100% { background-position: 400%; }
+}
+
+/* 🎁 Page 2 */
+.banner {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.gift-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gift-box {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: #ff9fcf;
+  border-radius: 0px 0px 10px 10px;
+  cursor: pointer;
+}
+
+.lid {
+  position: absolute;
+  top: -40px;
+  width: 150px;
+  height: 40px;
+  background: #e86ba1;
+  border-radius: 10px 10px 0 0;
+}
+
+.ribbon {
+  position: absolute;
+  width: 20px;
+  height: 150px;
+  left: 65px;
+  background: #fff;
+}
+
+.gift-content {
+  margin-top: 40px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.gift-content.show {
+  opacity: 1;
+}
+
+.cake {
+  width: 180px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.letter {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 10px;
+  width: 260px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.letter-closed {
+  font-size: 1.2rem;
+  color: #a85b91;
+}
+
+.letter-open {
+  white-space: pre-wrap;
+  color: #5c2b51;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .name { font-size: 2.2rem; }
+  .cake { width: 140px; }
+}
