@@ -5,7 +5,7 @@ const countdownEl = document.getElementById("countdown");
 const giftButton = document.getElementById("giftButton");
 
 if (countdownEl) {
-  const targetDate = new Date("2025-10-11T00:00:00").getTime();
+  const targetDate = new Date("2025-12-11T00:00:00").getTime();
 
   const timer = setInterval(() => {
     const now = new Date().getTime();
